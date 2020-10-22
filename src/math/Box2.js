@@ -8,7 +8,6 @@ function Box2( min, max ) {
 
 	this.min = ( min !== undefined ) ? min : new Vector2( + Infinity, + Infinity );
 	this.max = ( max !== undefined ) ? max : new Vector2( - Infinity, - Infinity );
-
 }
 
 Object.assign( Box2.prototype, {
@@ -19,7 +18,6 @@ Object.assign( Box2.prototype, {
 		this.max.copy( max );
 
 		return this;
-
 	},
 
 	setFromPoints: function ( points ) {
@@ -29,11 +27,9 @@ Object.assign( Box2.prototype, {
 		for ( var i = 0, il = points.length; i < il; i ++ ) {
 
 			this.expandByPoint( points[ i ] );
-
 		}
 
 		return this;
-
 	},
 
 	setFromCenterAndSize: function () {
@@ -47,9 +43,7 @@ Object.assign( Box2.prototype, {
 			this.max.copy( center ).add( halfSize );
 
 			return this;
-
 		};
-
 	}(),
 
 	clone: function () {
@@ -64,7 +58,6 @@ Object.assign( Box2.prototype, {
 		this.max.copy( box.max );
 
 		return this;
-
 	},
 
 	makeEmpty: function () {
